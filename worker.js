@@ -44,7 +44,8 @@ async function handleRequest(request) {
        await sendTelegramMessage(chatId, businessConnectionId, response);
      } else if (message.text.toLowerCase() === '/clear') {
        delete conversationHistory[senderId];
-       await sendTelegramMessage(chatId, businessConnectionId, 'Conversation history cleared.');
+       delete Systemprompt[senderId];
+       await sendTelegramMessage(chatId, businessConnectionId, 'Conversation history and system prompt cleared.');
      } else if (message.text.startsWith('/test')||message.text.toLowerCase() === 'help' || 
      message.text.toLowerCase() === 'hi' || 
      message.text.toLowerCase() === 'hello' || 
