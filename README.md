@@ -32,7 +32,7 @@ Telegram Business bot running on Cloudflare Workers (WIP)
   button_text - button_url
   ```
 - `/set {system prompt}`: Set a custom system prompt for the AI model (can be used on @thebotthatsucks_bot) (applies to the sender only use /clear to clear it)
-- `/correct {text}`: Correct and rewrite text using the Grammarly API
+- `/correct {text}`: Correct and rewrite text using the Grammarly API (weird api, prefer /ask for this)
 - `/clear`: Clear the conversation history and custom system prompt.
 
 ## API Keys
