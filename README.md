@@ -14,6 +14,7 @@ Telegram Business bot running on Cloudflare Workers (WIP)
 - Wikipedia article summarization
 - Customizable system prompts for AI model
 - Custom Inline keyboard button generations with URLs
+- Cats! 
 
 ## Usage
 
@@ -26,6 +27,7 @@ Telegram Business bot running on Cloudflare Workers (WIP)
 - `/random` or `random` (or `/random protect`): Get a random animated emoji
 - `/gen {prompt}` or `generate... {prompt}`: Generate an image using AI
 - `/wiki {query}`: Summarize a Wikipedia article
+-  `/cat`: Get a cat fact
 - `/url`: Send a message with inline keyboard buttons for URLs (photoUrl is optional)
   ```
   /url [message text] [photoUrl]
