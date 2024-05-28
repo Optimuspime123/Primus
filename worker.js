@@ -60,6 +60,7 @@ async function handleRequest(request) {
 /sticker or "sticker" (or /sticker protect) - to get a random sticker.\n
 /random or "random" (or /random protect) - to get a random animated emoji. \n
 /gen {prompt} or "generate... {prompt}" - Generate an image using AI!\n
+/cat - Get a fact about cats 🙀 \n
 /wiki {query} - Summarise a Wikipedia article..\n
 \`\`\` /url - /url [message text] [photoUrl] \n button_text - button_url \`\`\` \n
 /set {system prompt} - Can be used on @thebotthatsucks_bot to set user's custom system prompt.
