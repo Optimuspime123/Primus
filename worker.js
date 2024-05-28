@@ -173,7 +173,7 @@ ${messageDetails}
        }
      }
    }  
- else {
+ else { // Handle user messages - no business connection id 
    if (message.text.startsWith('/set')) {
      const prompt = message.text.slice(4).trim();
      Systemprompt[senderId] = prompt;
