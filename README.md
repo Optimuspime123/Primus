@@ -1,6 +1,6 @@
 # Primus
 
-Telegram Business bot running on Cloudflare Workers (WIP)
+Chatbot for Telegram Business accounts running on Cloudflare Workers (WIP)
 
 ## Features
 
@@ -50,6 +50,7 @@ Make sure to replace the placeholders `BOT_TOKEN` and `API_KEY` in the code with
 
 ## Usage
 Copy the contents of worker.js (Or modify them) and paste in the [cloudfare workers dashboard](https://dash.cloudflare.com/) 
+Set the webhook for your bot to your Cloudfare Workers url
 
 ## Contributing
 uh do stuff if you want to idc
