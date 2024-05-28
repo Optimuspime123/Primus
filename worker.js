@@ -1,6 +1,7 @@
+//forgive any and all shitcode
 addEventListener('fetch', (event) => {
  event.respondWith(handleRequest(event.request));
- //event.respondWith(new Response('OK')); ignore everything
+ //event.respondWith(new Response('OK')); //ignore everything
 });
 const conversationHistory = {};
 const Systemprompt = {};
@@ -24,7 +25,7 @@ async function handleRequest(request) {
        // Get the current conversation history for this user
        const history = conversationHistory[senderId];
      
-       // Check if the conversation history exceeds 10000 characters
+       // Check if the conversation history exceeds 20000 characters
        const historyLength = history.reduce(
          (sum, msg) => sum + msg.content.length,
          0
@@ -72,7 +73,12 @@ ${messageDetails}
        const text = message.text.slice(8).trim(); 
        const response = await queryGrammarly(text);
        await sendTelegramMessage(chatId, businessConnectionId, response);
-     } else if (message.text.startsWith('/quote')) {
+     } else if (message.text.startsWith('/cat')) {
+        await sendTelegramChatAction(chatId, businessConnectionId, 'typing');
+        const fact = await getCatFact();
+        await sendTelegramMessage(chatId, businessConnectionId, fact);
+       }
+       else if (message.text.startsWith('/quote')) {
        await sendTelegramChatAction(chatId, businessConnectionId, 'typing');
        const response = await getQuote();
        await sendTelegramMessage(chatId, businessConnectionId, response);
@@ -558,4 +564,14 @@ async function sendWikiResponse(chatId, businessConnectionId, text, originalUrl,
      'Content-Type': 'application/json',
    },
  });
+}
+async function getCatFact() {
+    try {
+        const response = await fetch('https://catfact.ninja/fact');
+        const data = await response.json();
+        return data.fact;
+    } catch (error) {
+        console.error('Error fetching cat fact:', error);
+        return 'Could not fetch a cat fact at this time.';
+    }
 }
