@@ -63,7 +63,7 @@ async function handleRequest(request) {
 /cat - Get a fact about cats 🙀 \n
 /wiki {query} - Summarise a Wikipedia article..\n
 \`\`\` /url - /url [message text] [photoUrl] \n button_text - button_url \`\`\` \n
-/set {system prompt} - Can be used on @thebotthatsucks_bot to set user's custom system prompt.
+/set \{system prompt\} - Can be used on [this bot](t.me/thebotthatsucks_bot) to set user's custom system prompt.\n
 Message Details:
 \`\`\`json
 ${messageDetails}
