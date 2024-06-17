@@ -14,7 +14,9 @@ Chatbot for Telegram Business accounts running on Cloudflare Workers (WIP)
 - Wikipedia article summarization
 - Customizable system prompts for AI model
 - Custom Inline keyboard button generations with URLs
-- Cats! 
+- Cats!
+- Message effects!
+- donation option
 
 ## Usage
 
